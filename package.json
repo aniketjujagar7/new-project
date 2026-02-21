@@ -1,0 +1,10 @@
+{
+  "name": "masale-market",
+  "version": "1.0.0",
+  "description": "Simple masale selling website with owner access control",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
