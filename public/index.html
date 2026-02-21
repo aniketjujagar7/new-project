@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masale Market</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🌶️ Masale Market</h1>
+      <p>Fresh Indian spices at your doorstep.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Available Masale</h2>
+        <div id="products" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Place an Order</h2>
+        <form id="orderForm" class="card">
+          <input name="customerName" placeholder="Your name" required />
+          <input name="phone" placeholder="Phone" required />
+          <textarea name="address" placeholder="Delivery address" required></textarea>
+          <select name="productId" id="productSelect" required></select>
+          <input name="quantity" type="number" min="1" value="1" required />
+          <button type="submit">Order Now</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Owner Login</h2>
+        <form id="loginForm" class="card small">
+          <input name="username" placeholder="Username" value="owner" required />
+          <input name="password" type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+      </section>
+
+      <section id="adminPanel" class="hidden">
+        <h2>Owner Control Panel</h2>
+        <p>Full access to products and all orders.</p>
+        <button id="logoutBtn">Logout</button>
+
+        <h3>Add Product</h3>
+        <form id="addProductForm" class="card">
+          <input name="name" placeholder="Product name" required />
+          <input name="price" type="number" step="0.01" placeholder="Price" required />
+          <textarea name="description" placeholder="Description" required></textarea>
+          <button type="submit">Add Product</button>
+        </form>
+
+        <h3>Manage Products</h3>
+        <div id="adminProducts" class="list"></div>
+
+        <h3>All Orders</h3>
+        <div id="orders" class="list"></div>
+      </section>
+
+      <p id="status"></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
